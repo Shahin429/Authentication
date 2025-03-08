@@ -1,6 +1,5 @@
 import 'package:authentication/res/components/modify_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../viewModel/service/http_service.dart';
 import '../../models/login_request.dart';
 
@@ -41,9 +40,8 @@ class _LoginScreenState extends State<LoginScreen> {
         }
       } catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('An error occurred: $e')),
+          SnackBar(content: Text('Invalid email or password')),
         );
-        throw Exception("Error occurred: $e");
       }
     }
   }

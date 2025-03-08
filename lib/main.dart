@@ -1,4 +1,6 @@
 import 'package:authentication/view/change_password/password_change_screen.dart';
+import 'package:authentication/viewModel/service/notification_service.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'viewModel/service/http_service.dart';
 import 'view/login/login_screen.dart';
@@ -6,6 +8,8 @@ import 'view/home/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+  // await NotificationService.instance.initialize();
   await HttpService().initialize();
   runApp(MyApp());
 }
